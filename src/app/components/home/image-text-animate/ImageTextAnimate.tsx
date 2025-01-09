@@ -2,7 +2,7 @@
 import { IHome } from "@/types/home-type";
 import { IStrapiResponse } from "@/types/strapi-type";
 import React, { useEffect } from "react";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./style.module.css";
 import { useRouter } from "next/navigation";
