@@ -15,7 +15,7 @@ const ListProyects = () => {
     })
     .catch((error) => {
       console.log(error);
-      return <h1>ERROR</h1>;
+      return <h1>Ups! Algo a fallado</h1>;
     });
 };
 

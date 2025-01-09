@@ -53,7 +53,7 @@ const ContactPage = async () => {
     })
     .catch((error) => {
       console.log(error);
-      return <div></div>;
+      return <div>Ups! algo a fallado</div>;
     });
 };
 

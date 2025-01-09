@@ -10,7 +10,7 @@ export default function Home() {
         </main>
       );
     })
-    .catch((error) => {
+    .catch(() => {
       return <div>Error</div>;
     });
 }
