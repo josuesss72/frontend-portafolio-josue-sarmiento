@@ -3,12 +3,16 @@ import getBase64Image from "@/utils/get-base64-image";
 import Image from "next/image";
 import React from "react";
 
-const AboutPage = () => {
-  return getAboutInfo().then(async (res) => {
-    const { title, image, description } = res.data;
+const AboutPage = async () => {
+  try {
     const host = process.env.NEXT_PUBLIC_STRAPI_HOST;
+
+    // OBTENEMOS LOS DATOS
+    const res = await getAboutInfo();
+    const { title, image, description } = res.data;
     const urlImage = `${host}${image.url}`;
     const baseUrlImage = await getBase64Image(urlImage);
+
     return (
       <main className="flex flex-col items-center p-4">
         <Image
@@ -28,7 +32,10 @@ const AboutPage = () => {
         </div>
       </main>
     );
-  });
+  } catch (error) {
+    console.log(error);
+    return <div>Ups! Algo a salido mal</div>;
+  }
 };
 
 export default AboutPage;
