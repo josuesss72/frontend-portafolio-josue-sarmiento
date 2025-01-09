@@ -30,7 +30,7 @@ const ImageTextAnimate = ({ res }: IProps) => {
     setTimeout(() => {
       router.push("/pages/about");
     }, 4300);
-  }, []);
+  }, [router]);
 
   return (
     <>
