@@ -15,7 +15,7 @@ const ContactPage = async () => {
     const base64Image = await getBase64Image(urlImage);
 
     return (
-      <main className="flex flex-col sm:flex-row sm:justify-between">
+      <main className="flex mt-8 flex-col sm:flex-row sm:justify-between">
         <article>
           <Image
             className="hidden sm:block"

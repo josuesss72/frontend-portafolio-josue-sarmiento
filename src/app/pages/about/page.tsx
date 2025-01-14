@@ -20,7 +20,7 @@ const AboutPage = async () => {
           height={150}
           src={urlImage}
           alt="Framed portrait of Josue Sarmiento"
-          className=""
+          className="hover:rotate-3 transition-transform"
           placeholder="blur"
           blurDataURL={`${baseUrlImage}`}
         />

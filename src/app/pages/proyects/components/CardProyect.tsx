@@ -27,7 +27,7 @@ const CardProyect = ({ proyect }: IProps) => {
             <div className="flex w-full h-full" key={image.id}>
               <Image
                 unoptimized
-                className="object-fill aspect-square rounded-t-md"
+                className="object-contain aspect-square rounded-t-md"
                 src={`${host}${image.url}`}
                 width={4000}
                 height={5913}
