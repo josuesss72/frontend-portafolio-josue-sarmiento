@@ -6,9 +6,12 @@ export default function customLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className="h-full flex flex-col">
       <Header />
       {children}
-    </>
+      <footer className=" flex justify-center mt-auto">
+        <span className="text-xs">By @JhosuaSr Developer</span>
+      </footer>
+    </div>
   );
 }
