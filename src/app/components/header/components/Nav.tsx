@@ -16,7 +16,6 @@ import { usePathname } from "next/navigation";
 const Nav = () => {
 	// CONSTANTES
 	const currentPathPage = usePathname().slice(6);
-	const host = process.env.NEXT_PUBLIC_STRAPI_HOST;
 
 	const { language } = useLanguage();
 	const t = translations[language].header;
@@ -37,7 +36,7 @@ const Nav = () => {
 				);
 			})}
 			<a
-				href={`${host}/uploads/Curriculum_en_ingles_5b033d9286.pdf`}
+				href={`https://drive.google.com/file/d/1CYXfs-4hsRC36nS_8_xEc6orNKGm2H18/view?usp=sharing`}
 				download
 				className="bg-gray-700 hover:bg-gray-600 text-sm text-white py-2 px-2 rounded"
 			>
