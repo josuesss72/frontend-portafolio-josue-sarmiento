@@ -13,6 +13,7 @@ export interface IProyect {
 	inProcess: boolean;
 	url: string;
 	description: string;
+	github: string;
 }
 
 export interface IProyectPage extends IIdentifiers {

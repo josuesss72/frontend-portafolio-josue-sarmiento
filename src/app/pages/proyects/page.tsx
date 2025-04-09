@@ -3,26 +3,24 @@ import { IProyectPage } from "@/types/proyect-type";
 import Image from "next/image";
 import React from "react";
 import ListProyects from "./components/ListProyects";
+import Title from "./components/Title";
 
 const ProyectsPage = async () => {
 	try {
-		//const host = process.env.NEXT_PUBLIC_STRAPI_HOST;
-
 		// OBTENEMOS LOS DATOS
 		const res = await getProyectPage();
-		const { title, image } = res.data as IProyectPage;
+		const { image } = res.data as IProyectPage;
 
 		return (
 			<main className="">
-				<h1 className="text-white p-4">{title}</h1>
-
+				<Title />
 				<article className="flex">
 					<ListProyects />
 					<Image
-						className="hidden sm:block sm:ml-auto"
+						className="hidden sm:block sm:ml-auto sm:h-[350px] sm:w-[140px]"
 						src={`${image.url}`}
 						width={128}
-						height={248}
+						height={424}
 						alt=""
 					/>
 				</article>

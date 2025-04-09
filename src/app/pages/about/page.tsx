@@ -2,14 +2,13 @@ import { getAboutInfo } from "@/lib/get-about-info";
 import getBase64Image from "@/utils/get-base64-image";
 import Image from "next/image";
 import React from "react";
+import Content from "./components/Content";
 
 const AboutPage = async () => {
 	try {
-		//const host = process.env.NEXT_PUBLIC_STRAPI_HOST;
-
 		// OBTENEMOS LOS DATOS
 		const res = await getAboutInfo();
-		const { title, image, description } = res.data;
+		const { image } = res.data;
 		const urlImage = `${image.url}`;
 		const baseUrlImage = await getBase64Image(urlImage);
 
@@ -24,12 +23,7 @@ const AboutPage = async () => {
 					placeholder="blur"
 					blurDataURL={`${baseUrlImage}`}
 				/>
-				<h2 className="text-2xl font-bold text-yellow-500 mt-4">{title}</h2>
-				<div className="flex mt-8">
-					<section className="max-w-2xl px-4">
-						<p className="text-white text-sm font-thin">{description}</p>
-					</section>
-				</div>
+				<Content />
 			</main>
 		);
 	} catch (error) {

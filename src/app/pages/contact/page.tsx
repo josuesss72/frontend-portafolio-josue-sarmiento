@@ -34,7 +34,7 @@ const ContactPage = async () => {
 							<Link
 								key={id}
 								style={{ background: color }}
-								className="flex p-4 gap-4 cursor-pointer items-center w-[200px]"
+								className="flex p-4 gap-4 cursor-pointer items-center"
 								href={`${url}`}
 							>
 								<Image

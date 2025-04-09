@@ -11,7 +11,7 @@ interface IProps {
 
 const CardProyect = ({ proyect }: IProps) => {
 	//const host = process.env.NEXT_PUBLIC_STRAPI_HOST;
-	const { name, url, type, images, description } = proyect;
+	const { name, url, type, images, description, github } = proyect;
 
 	// ESTADOS
 	const [mouseEnter, setMouseEnter] = useState(false);
@@ -49,6 +49,9 @@ const CardProyect = ({ proyect }: IProps) => {
 				{description}
 				<Link className="p-2 bg-blue-300 text-black font-medium" href={url}>
 					Link Proyect
+				</Link>
+				<Link className="p-2 bg-blue-300 text-black font-medium" href={github}>
+					Github
 				</Link>
 			</article>
 		</article>
